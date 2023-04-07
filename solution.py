@@ -7,5 +7,5 @@ chat_id = 1412519104
 
 def solution(p: float, x: np.array) -> tuple:
     alpha = 1 - p
-    return 2*(x - erlang.ppf(alpha / 2, n, loc = 0, scale = 1 / n)) / 2209, \
-           2*(x - erlang.ppf(1 - alpha / 2, n, loc = 0, scale = 1 / n)) / 2209
+    return 2*(x - erlang.ppf(alpha / 2, len(x), loc = 0, scale = 1 / len(x))) / 2209, \
+           2*(x - erlang.ppf(1 - alpha / 2, len(x), loc = 0, scale = 1 / len(x))) / 2209
